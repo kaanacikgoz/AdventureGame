@@ -1,14 +1,26 @@
-abstract class Location extends Game {
+import java.util.Scanner;
 
+abstract class Location {
+
+    private Player player;
     private String name;
+    Scanner input = new Scanner(System.in);
 
-    Location(Player player, Location location, String name) {
-        super(player, location);
+    Location(Player player, String name) {
+        this.player = player;
         this.name = name;
     }
 
+    Player getPlayer() {
+        return player;
+    }
+
+    void setPlayer(Player player) {
+        this.player = player;
+    }
+
     String getName() {
-        return this.name;
+        return name;
     }
 
     void setName(String name) {

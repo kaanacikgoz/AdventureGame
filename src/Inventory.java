@@ -1,77 +1,28 @@
-class Inventory extends Player {
+class Inventory {
 
-    private boolean water;
-    private boolean food;
-    private boolean firewood;
-    private String weaponName;
-    private String armorName;
-    private byte weaponDamage;
-    private byte armorDefence;
+    private Weapon weapon;
+    private Armor armor;
 
-    Inventory(Player player, Location location, Inventory inventory, byte damage, byte health, byte money, String name, boolean water, boolean food, boolean firewood, String weaponName, String armorName, byte weaponDamage, byte armorDefence) {
-        super(player, location, inventory, damage, health, money, name);
-        this.water = water;
-        this.food = food;
-        this.firewood = firewood;
-        this.weaponName = weaponName;
-        this.armorName = armorName;
-        this.weaponDamage = weaponDamage;
-        this.armorDefence = armorDefence;
+    Inventory() {
+        this.weapon = new Weapon("Yumruk",-1,0,0);
+        this.armor = new Armor(-1,"None",0,0);
     }
 
-    public boolean isWater() {
-        return water;
+    Weapon getWeapon() {
+        return weapon;
     }
 
-    public void setWater(boolean water) {
-        this.water = water;
+    void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
-    public boolean isFood() {
-        return food;
+    Armor getArmor() {
+        return armor;
     }
 
-    public void setFood(boolean food) {
-        this.food = food;
+    void setArmor(Armor armor) {
+        this.armor = armor;
     }
 
-    public boolean isFirewood() {
-        return firewood;
-    }
-
-    public void setFirewood(boolean firewood) {
-        this.firewood = firewood;
-    }
-
-    public String getWeaponName() {
-        return weaponName;
-    }
-
-    public void setWeaponName(String weaponName) {
-        this.weaponName = weaponName;
-    }
-
-    public String getArmorName() {
-        return armorName;
-    }
-
-    public void setArmorName(String armorName) {
-        this.armorName = armorName;
-    }
-
-    public byte getWeaponDamage() {
-        return weaponDamage;
-    }
-
-    public void setWeaponDamage(byte weaponDamage) {
-        this.weaponDamage = weaponDamage;
-    }
-
-    public byte getArmorDefence() {
-        return armorDefence;
-    }
-
-    public void setArmorDefence(byte armorDefence) {
-        this.armorDefence = armorDefence;
-    }
 }
+
