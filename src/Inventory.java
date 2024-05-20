@@ -7,7 +7,7 @@ class Inventory {
     private static int water;
 
     Inventory() {
-        this.weapon = new Weapon("Yumruk",-1,0,0);
+        this.weapon = new Weapon("Fist",-1,0,0);
         this.armor = new Armor(-1,"None",0,0);
         food = 0;
         firewood = 0;
@@ -35,7 +35,7 @@ class Inventory {
     }
 
     public void setFood(int food) {
-        this.food = food;
+        Inventory.food = food;
     }
 
     public int getFirewood() {
@@ -43,7 +43,7 @@ class Inventory {
     }
 
     public void setFirewood(int firewood) {
-        this.firewood = firewood;
+        Inventory.firewood = firewood;
     }
 
     public int getWater() {
@@ -51,7 +51,7 @@ class Inventory {
     }
 
     public void setWater(int water) {
-        this.water = water;
+        Inventory.water = water;
     }
 
 }
