@@ -1,7 +1,11 @@
 public class ToolStore extends NormalLoc {
 
-    Weapon[] weapons;
-    Armor[] armors;
+    static Weapon[] weapons = {new Weapon("Gun", 1, 2, 15),
+            new Weapon("Sword", 2, 3, 35),
+            new Weapon("Rifle", 3, 7, 45)};
+    static Armor[] armors = {new Armor(1, "Light Armor", 1, 15),
+            new Armor(2, "Middle Armor", 3, 25),
+            new Armor(3, "Heavy Armor", 5, 40)};
 
     ToolStore(Player player) {
         super(player, "Tool Store");
@@ -38,9 +42,6 @@ public class ToolStore extends NormalLoc {
 
     private void printWeapon() {
         System.out.println("--------------------Weapons--------------------");
-        weapons = new Weapon[] {new Weapon("Gun", 1, 2, 15),
-                                new Weapon("Sword", 2, 3, 35),
-                                new Weapon("Rifle", 3, 7, 45)};
         for (Weapon w:weapons) {
             System.out.println("id: "+w.getId()+", Name: "+w.getName()+", Damage: "+w.getDamage()+", Price: "+w.getPrice());
         }
@@ -81,9 +82,6 @@ public class ToolStore extends NormalLoc {
 
     private void printArmor() {
         System.out.println("--------------------Armors--------------------");
-        armors =new Armor[]{new Armor(1, "Light Armor", 1, 15),
-                            new Armor(2, "Middle Armor", 3, 25),
-                            new Armor(3, "Heavy Armor", 5, 40)};
         for (Armor armor:armors) {
             System.out.println( armor.getId()+
                                 "-"+ armor.getName()+

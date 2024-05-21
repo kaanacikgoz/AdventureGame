@@ -112,7 +112,7 @@ class Player extends Game {
 
     void playerInfo() {
         System.out.println("Your weapon " + getInventory().getWeapon().getName() +
-                ", Damage is " + this.getDamage() +
+                ", Damage is " + this.getTotalDamage() +
                 ", Armor is " + getInventory().getArmor().getName() +
                 ", Block is " + getInventory().getArmor().getBlock() +
                 ", Health is " + this.getHealth() +

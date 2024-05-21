@@ -34,7 +34,7 @@ class Game {
         while (true) {
             player.playerInfo();
             System.out.println("Locations");
-            System.out.println("1-Safe House\n2-Tool Store\n3-Cave\n4-Forest\n5-River\n0-Exit Game");
+            System.out.println("1-Safe House\n2-Tool Store\n3-Cave\n4-Forest\n5-River\n6-Mine\n0-Exit Game");
             System.out.print("Where do you want to go? Please select one: ");
             int locChoose = input.nextInt();
             switch (locChoose) {
@@ -74,6 +74,9 @@ class Game {
                         System.out.println("You can't enter here again!");
                         continue;
                     }
+                    break;
+                case 6:
+                    location = new Mine(player);
                     break;
                 default:
                     System.out.println("Please enter a valid location");
